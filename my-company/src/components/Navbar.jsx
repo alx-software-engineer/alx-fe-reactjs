@@ -4,7 +4,11 @@ function Navbar() {
     return (
         <>
              <nav>
-            <ul>
+            <ul style={{
+                listStyleType: 'disc',
+                paddingLeft: '20px',
+                margin: '10px 0',
+            }}>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
