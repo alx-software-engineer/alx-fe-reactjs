@@ -2,25 +2,29 @@ import { Outlet, Link } from "react-router-dom";
 
 function Navbar() {
     return (
-        <nav>
+        <>
+             <nav>
             <ul>
                 <li>
-                    <link to="/">Home</link>
+                    <Link to="/">Home</Link>
                 </li>
 
                  <li>
-                    <link to="about">About Us</link>
+                    <Link to="/about">About Us</Link>
                 </li>
 
                  <li>
-                    <link to="services">Services</link>
+                    <Link to="/services">Services</Link>
                 </li>
 
                  <li>
-                    <link to="contact">Contact Us</link>
+                    <Link to="/contact">Contact Us</Link>
                 </li>
             </ul>
         </nav>
+
+        <Outlet />
+        </>
     )
 }
 
