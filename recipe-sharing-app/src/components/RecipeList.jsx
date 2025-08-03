@@ -1,14 +1,14 @@
 // RecipeList component
   import  useRecipeStore  from './recipeStore';
+  import DeleteRecipe from './DeleteRecipeButton';
 
   const RecipeList = () => {
     const recipes = useRecipeStore(state => state.recipes);
-    const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
 
-    const rmvBtn = {
-      backgroundColor : "red",
+    const editBtn = {
+      backgroundColor : "green",
       color: "white",
-      border : "0px"
+      border : "0px",
     }
 
     return (
@@ -17,7 +17,8 @@
           <div key={recipe.id}>
             <h3>{recipe.title}</h3>
             <p>{recipe.description}</p>
-            <button onClick={() => deleteRecipe(recipe.id)} style={rmvBtn}>Delete</button>
+            <DeleteRecipe id={recipe.id}/>
+            <button style={editBtn}>Edit Recipe</button>
           </div>
         ))}
       </div>
