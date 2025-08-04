@@ -1,7 +1,7 @@
 // RecipeList component
-  import  useRecipeStore  from './recipeStore';
+  import useRecipeStore  from './recipeStore';
   import DeleteRecipe from './DeleteRecipeButton';
-  import DialogForm from './DialogForm';
+  import EditRecipeForm from './EditRecipeForm';
   import { useState } from 'react';
 
   const RecipeList = () => {
@@ -29,7 +29,7 @@
             <button onClick={() => setMyId(recipe.id, true)}>Dialog Form</button>
           </div>
         ))}
-        {popDialog && <DialogForm  isOpen={popDialog}  onClose={closeDialog} id={myID} />}
+        {popDialog && <EditRecipeForm  isOpen={popDialog}  onClose={closeDialog} id={myID} />}
       </div>
     );
   };
