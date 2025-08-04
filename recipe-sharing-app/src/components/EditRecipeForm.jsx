@@ -12,8 +12,8 @@ function EditRecipeForm({isOpen, onClose, id}) {
             if (isOpen) dialogRef.current.showModal()
     }, [isOpen]);
     
-    function closeDialog(e) {
-        e.preventDefault();
+    function closeDialog(event) {
+        event.preventDefault();
         updateRecipe(id, title, description)
         onClose();
     };
