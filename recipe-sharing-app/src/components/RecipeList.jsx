@@ -1,14 +1,22 @@
 // RecipeList component
   import  useRecipeStore  from './recipeStore';
   import DeleteRecipe from './DeleteRecipeButton';
+  import DialogForm from './DialogForm';
+  import { useState } from 'react';
 
   const RecipeList = () => {
     const recipes = useRecipeStore(state => state.recipes);
 
-    const editBtn = {
-      backgroundColor : "green",
-      color: "white",
-      border : "0px",
+    const [popDialog, setIsOpen] = useState(false);
+    const [myID, setID] = useState(0);
+    
+    function closeDialog() {
+      setIsOpen(false);
+    }
+
+    function setMyId(id, status) {
+      setID(id);
+      setIsOpen(status);
     }
 
     return (
@@ -18,9 +26,10 @@
             <h3>{recipe.title}</h3>
             <p>{recipe.description}</p>
             <DeleteRecipe id={recipe.id}/>
-            <button style={editBtn}>Edit Recipe</button>
+            <button onClick={() => setMyId(recipe.id, true)}>Dialog Form</button>
           </div>
         ))}
+        {popDialog && <DialogForm  isOpen={popDialog}  onClose={closeDialog} id={myID} />}
       </div>
     );
   };
