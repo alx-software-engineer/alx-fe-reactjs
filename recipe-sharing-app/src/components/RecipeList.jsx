@@ -26,7 +26,7 @@
           <div key={recipe.id}>
             <h3>{recipe.title}</h3>
             <Link to={`/recipes/${recipe.id}`}>
-              View Details
+              View Details Now
             </Link>
             {/* <DeleteRecipe id={recipe.id}/> */}
             {/* <button onClick={() => setMyId(recipe.id, true)}>Edit</button> */}
