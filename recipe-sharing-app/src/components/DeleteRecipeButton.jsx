@@ -1,8 +1,15 @@
 import useRecipeStore from "./recipeStore";
+import { useNavigate } from "react-router-dom";
 
 
 function DeleteRecipe(props) {
     const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
+    const navigate = useNavigate();
+
+    function handleDelete(props) {
+     deleteRecipe(props.id)
+     navigate('/') 
+    }
 
      const rmvBtn = {
       backgroundColor : "red",
