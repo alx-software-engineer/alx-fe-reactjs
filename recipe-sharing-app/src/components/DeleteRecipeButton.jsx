@@ -2,14 +2,9 @@ import useRecipeStore from "./recipeStore";
 import { useNavigate } from "react-router-dom";
 
 
-function DeleteRecipe(props) {
+function DeleteRecipe({id}) {
     const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
     const navigate = useNavigate();
-
-    function handleDelete(props) {
-     deleteRecipe(props.id)
-     navigate('/') 
-    }
 
      const rmvBtn = {
       backgroundColor : "red",
@@ -18,7 +13,14 @@ function DeleteRecipe(props) {
       marginRight : "10px"
     }
 
-    return  <button onClick={() => deleteRecipe(props.id)} style={rmvBtn}>Delete</button>
+    function handleDelete(id) {
+      deleteRecipe(id)
+
+      navigate('/')
+
+    }
+
+    return  <button onClick={() => handleDelete(id)} style={rmvBtn}>Delete</button>
 };
 
 export default DeleteRecipe;

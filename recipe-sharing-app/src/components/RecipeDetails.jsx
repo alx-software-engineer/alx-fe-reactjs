@@ -7,15 +7,16 @@
 
   const RecipeDetails = () => {
     const {myRecipeId} = useParams();
+    const convertedID = parseInt(myRecipeId, 10);
     const recipe = useRecipeStore(state =>
-      state.recipes.find(recipe => recipe.id === +myRecipeId)
+      state.recipes.find(recipe => recipe.id === convertedID)
     );
 
     return (
       <div>
         <h1>{recipe.title}</h1>
         <p>{recipe.description}</p>
-        <DeleteRecipe />
+        <DeleteRecipe id={recipe.id} />
         <EditRecipeForm />
       </div>
     );
