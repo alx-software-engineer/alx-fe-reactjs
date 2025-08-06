@@ -1,22 +1,20 @@
-import { Outlet, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails.jsx';
+import HomePage from './components/HomePage.jsx';
+import Layout from './components/Layout.jsx';
 import './App.css';
 
 
 function App() {
-
   return (
-      <div>
-      <header>
-        <h1>My Recipe App</h1>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-      </header>
-
-      <main style={{marginTop:"20px"}}>
-        <Outlet />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<HomePage />}  />
+          <Route path='recipes/:myRecipeId' element={<RecipeDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
