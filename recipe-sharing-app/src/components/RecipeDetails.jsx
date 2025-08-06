@@ -7,10 +7,11 @@
 
   const RecipeDetails = () => {
     const {myRecipeId} = useParams();
-    const convertedID = parseInt(myRecipeId, 10);
     const recipe = useRecipeStore(state =>
-      state.recipes.find(recipe => recipe.id === convertedID)
+      state.recipes.find(recipe => recipe.id === +myRecipeId)
     );
+
+    !recipe ? "Sorry, recipe not found" : recipe; 
 
     return (
       <div>
