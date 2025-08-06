@@ -6,8 +6,8 @@ function HomePage() {
     return (
         <>
             <div style={{display:"flex", justifyContent:"space-between"}}>
-            <AddRecipeForm />
-            <SearchBar />
+                <AddRecipeForm />
+                <SearchBar />
             </div>
             <hr style={{ margin: '2rem 0' }} />
             <RecipeList />
