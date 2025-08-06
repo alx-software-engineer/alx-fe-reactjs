@@ -4,6 +4,7 @@
 
   const RecipeList = () => {
     const recipes = useRecipeStore(state => state.recipes);
+    const filteredrecipes = useRecipeStore(state => state.filteredRecipes);
     
    
     return (

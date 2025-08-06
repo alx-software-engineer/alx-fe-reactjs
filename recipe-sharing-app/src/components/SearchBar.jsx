@@ -4,11 +4,14 @@ function SearchBar() {
     const setSearchTerm = useRecipeStore(state => state.setSearchTerm);
 
     return (
-        <input
-            type="text"
-            placeholder="Search recipes..."
-            onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div>
+            <input
+                type="text"
+                placeholder="Search recipes..."
+                onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <h2>Search Recipe</h2>
+        </div>
     );
 };
 
