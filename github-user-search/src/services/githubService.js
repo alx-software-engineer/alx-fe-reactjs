@@ -1,13 +1,25 @@
-import { Axios } from "axios";
+import { useState, useEffect } from "react";
+import api from "../components/github";
 
 
 
-function fetchUserData() {
-    // API Key and URL
-    const apiUrl = import.meta.env.VITE_API_URL;
-    const apiKey = import.meta.env.VITE_APP_GITHUB_API_KEY;
+function fetchUserData({user}) {
 
-    
+    const [data, setData] = useState("");
+    const [error, setError] = useState("");
+   
+    // Get User
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await api.get(`users/${user}`);
+                setData(res.data.login);
+            } catch (error) {
+                setError("This UserName does not Exist");
+            }
+        }
+    })
+
 
 }
 

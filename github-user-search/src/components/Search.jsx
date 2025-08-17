@@ -3,8 +3,13 @@ import { useState } from "react";
 function Search() {
     const [userName, setUserName] = useState("");
 
+    function handleSubmit(event) {
+        event.preventDefault();
+
+    } 
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
                 <input 
                 type="text"
@@ -14,6 +19,7 @@ function Search() {
                 placeholder="Search UserName"
                 />
             </div>
+            <button type="submit">Search</button>
         </form>
     )
     
