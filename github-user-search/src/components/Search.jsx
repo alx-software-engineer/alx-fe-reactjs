@@ -4,12 +4,11 @@ import fetchUserData from "../services/githubService";
 
 function Search() {
     const [userName, setUserName] = useState("");
-    const {user, isLoading, errorData} = useUserStore(state => ({
-        user: state.user,
-        isLoading: state.isLoading,
-        errorData: state.errorData,
-    }));
     
+    // Get state from zustand store
+    const user = useUserStore(state =>  state.user);
+    const errorData = useUserStore(state =>  state.errorData);
+    const isLoading = useUserStore(state =>  state.isLoading);
     const setUser = useUserStore(state =>  state.setUser);
     const setLoading = useUserStore(state =>  state.setLoading);
     const setError = useUserStore(state =>  state.setError);
@@ -52,12 +51,16 @@ function Search() {
                     />
                 <button 
                 className="text-xs absolute right-2 top-1.5 bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border-0 hover:border-1" 
-                type="submit">Search</button>
+                type="submit"> {isLoading ? 'Searching...' : 'Search'} </button>
                 </div>
             </form>
 
             <div className="mt-4">
-                <p>Here</p>
+                {isLoading && <p>Loading...</p>}
+                {errorData && <p style={{ color: 'red' }}>Looks like we cant find the user</p>}
+                <div>
+                    <h1>{user.name}</h1>
+                </div>
             </div>
         </div>
        
