@@ -21,19 +21,19 @@ function Search() {
     return (
          <div className="w-1/2 m-auto text-black bg-amber-500 p-2">
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className=" bg-white rounded-2xl p-2 relative">
                     <input 
-                    className="text-black bg-white rounded-2xl w-full text-xs p-2 placeholder-black"
+                    className="text-black w-full text-xs placeholder-black outline-none"
                     type="text"
                     name="username"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     placeholder="Search UserName"
                     />
-                </div>
                 <button 
-                className=""
+                className="text-xs absolute right-2 top-1.5 bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border-0 hover:border-1" 
                 type="submit">Search</button>
+                </div>
             </form>
 
             <div>
