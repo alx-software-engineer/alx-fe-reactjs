@@ -57,10 +57,18 @@ function Search() {
 
             <div className="mt-4">
                 {isLoading && <p>Loading...</p>}
-                {errorData && <p style={{ color: 'red' }}>Looks like we cant find the user</p>}
-                <div>
-                    <h1>{user.name}</h1>
-                </div>
+                {errorData && <p className="text-red-700">Looks like we cant find the user</p>}
+
+                { user && !isLoading && !errorData && (
+
+                    <div>
+                        <img src={user.avatar_url} alt="User Avatar" className="w-[100px] h-[100px] rounded-full" />
+                        <h2 className="font-bold">{user.name}</h2>
+                        <p>{user.bio}</p>
+                    </div>
+                    )
+                }
+               
             </div>
         </div>
        
