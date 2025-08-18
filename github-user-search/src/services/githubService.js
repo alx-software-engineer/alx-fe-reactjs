@@ -1,13 +1,19 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import useUserStore from "../Store/UserDetails";
-import api from "../components/github";
 import axios from "axios";
 
 
 
-function fetchUserData({user}) {
+function FetchUserData({user}) {
 
     const addUser = useUserStore(state => state.addUser);
+
+    const api = axios.create({
+        baseURL: import.meta.env.VITE_API_URL,
+        headers: {
+            Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_API_KEY}`,
+        },
+    });
    
     // Get User
     useEffect(() => {
@@ -26,4 +32,4 @@ function fetchUserData({user}) {
 
 }
 
-export default fetchUserData;
+export default FetchUserData;

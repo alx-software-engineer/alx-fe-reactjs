@@ -1,13 +1,19 @@
 import { useState } from "react";
+import useUserStore from "../Store/UserDetails";
+import FetchUserData from "../services/githubService";
 
 function Search() {
     const [userName, setUserName] = useState("");
+    const [isEmpty, setIsEmpty] = useState(false);
+    const userData = useUserStore(state => state.user);
 
+    
     function handleSubmit(event) {
         event.preventDefault();
-
+        <FetchUserData user={userData} /> 
+        
     } 
-
+    
     return (
         <form onSubmit={handleSubmit}>
             <div>
