@@ -1,35 +1,26 @@
-import { useEffect } from "react";
-import useUserStore from "../Store/UserDetails";
 import axios from "axios";
 
 
 
-function FetchUserData({user}) {
+function fetchUserData(user) {
 
     const addUser = useUserStore(state => state.addUser);
 
+    // Create URL and Headers
     const api = axios.create({
         baseURL: import.meta.env.VITE_API_URL,
         headers: {
             Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_API_KEY}`,
         },
     });
-   
-    // Get User
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await api.get(`users/${user}`);
-                addUser(res.data.login);
-            } catch (error) {
-                setError("This UserName does not Exist");
-            }
-        }
 
-        fetchData();
-    })
-
-
+    // Get Fetch User
+    try {
+        const res = api.get(`users/${user}`);
+        return (res.data);
+    } catch (error) {
+        return ("This UserName does not Exist");
+    }
 }
 
-export default FetchUserData;
+export default fetchUserData;

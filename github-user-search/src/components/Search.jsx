@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useUserStore from "../Store/UserDetails";
-import FetchUserData from "../services/githubService";
+import fetchUserData from "../services/githubService";
 
 function Search() {
     const [userName, setUserName] = useState("");
@@ -8,10 +8,9 @@ function Search() {
     const userData = useUserStore(state => state.user);
 
     
-    function handleSubmit(event) {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        <FetchUserData user={userData} /> 
-        
+        const data = await fetchUserData(userName); 
     } 
     
     return (
