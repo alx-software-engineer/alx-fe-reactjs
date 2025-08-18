@@ -1,10 +1,7 @@
 import axios from "axios";
 
 
-
-function fetchUserData(user) {
-
-    const addUser = useUserStore(state => state.addUser);
+const fetchUserData = async (user) => {
 
     // Create URL and Headers
     const api = axios.create({
@@ -15,12 +12,8 @@ function fetchUserData(user) {
     });
 
     // Get Fetch User
-    try {
-        const res = api.get(`users/${user}`);
-        return (res.data);
-    } catch (error) {
-        return ("This UserName does not Exist");
-    }
-}
+        const response = await api.get(`users/${user}`);
+        return response.data;
+};
 
 export default fetchUserData;
