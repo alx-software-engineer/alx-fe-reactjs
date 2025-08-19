@@ -94,7 +94,6 @@ function Search() {
                                     <h2 className="font-bold">{currentUser.name}</h2>
                                     <p className="pt-2">{currentUser.bio}</p>
                                     <p className="font-bold pt-2">{user.login}</p>
-
                                 </li>
                             })}
                         </ul>
