@@ -87,12 +87,12 @@ function Search() {
 
                     <nav>
                         <ul>
-
                             {user.map(currentUser => {
                                 <li key={currentUser.id}>
                                     <img src={currentUser.avatar_url} className="w-[50px] h-[50px] rounded-full" />
                                     <h2 className="font-bold">{currentUser.name}</h2>
                                     <p className="pt-2">{currentUser.bio}</p>
+                                    <p className="pt-2">{currentUser.html_url}</p>
                                     <p className="font-bold pt-2">{user.login}</p>
                                 </li>
                             })}
