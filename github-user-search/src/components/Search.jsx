@@ -40,11 +40,11 @@ function Search() {
     
     return (
          <div className="w-1/2 m-auto text-black p-2">
-            <h1 className="font-bold text-lg mb-3">LOOKUP GITHUB <span className="text-red-800">PROFILES</span> </h1>
+            <h1 className="font-bold text-xl mb-3">LOOKUP GITHUB <span className="text-red-800">PROFILES</span> </h1>
             <form onSubmit={handleSubmit}>
                 <div className=" bg-neutral-200 rounded-2xl p-2">
                     <input 
-                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border border-[#ca9503] rounded-2xl"
                     type="text"
                     name="username"
                     value={userName}
@@ -54,7 +54,7 @@ function Search() {
                     />
 
                     <input 
-                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border border-[#ca9503] rounded-2xl"
                     type="text"
                     name="Location"
                     value={location}
@@ -64,7 +64,7 @@ function Search() {
                     />
 
                     <input 
-                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border border-[#ca9503] rounded-2xl"
                     type="number"
                     name="Repo"
                     value={repo}
@@ -74,7 +74,7 @@ function Search() {
                     />
 
                 <button 
-                className="text-xs bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border-0 hover:border-1" 
+                className="text-xs bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border border-transparent hover:border-black" 
                 type="submit"> {isLoading ? 'Searching...' : 'Search'} </button>
                 </div>
             </form>
