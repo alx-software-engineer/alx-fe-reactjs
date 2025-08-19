@@ -4,6 +4,8 @@ import fetchUserData from "../services/githubService";
 
 function Search() {
     const [userName, setUserName] = useState("");
+    const [location, setLocation] = useState("");
+    const [repo, setRepo] = useState("");
     
     // Get state from zustand store
     const user = useUserStore(state =>  state.user);
@@ -38,19 +40,41 @@ function Search() {
     
     return (
          <div className="w-1/2 m-auto text-black p-2">
+            <h1 className="font-bold text-lg mb-3">LOOKUP GITHUB <span className="text-red-800">PROFILES</span> </h1>
             <form onSubmit={handleSubmit}>
-                <div className=" bg-neutral-200 rounded-2xl p-2 relative">
+                <div className=" bg-neutral-200 rounded-2xl p-2">
                     <input 
-                    className="text-black w-full text-xs placeholder-black outline-none"
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
                     type="text"
                     name="username"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
-                    placeholder="Search UserName"
+                    placeholder="Github UserName"
                     required
                     />
+
+                    <input 
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
+                    type="text"
+                    name="Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    placeholder="Location"
+                    required
+                    />
+
+                    <input 
+                    className="text-black w-full text-xs placeholder-black outline-none mb-3 p-2 border-1 border-[#ca9503] rounded-2xl"
+                    type="number"
+                    name="Repo"
+                    value={repo}
+                    onChange={(e) => setRepo(e.target.value)}
+                    placeholder="Minimum repository"
+                    required
+                    />
+
                 <button 
-                className="text-xs absolute right-2 top-1.5 bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border-0 hover:border-1" 
+                className="text-xs bg-[#ca9503] px-8 py-1.5 rounded-2xl cursor-pointer border-0 hover:border-1" 
                 type="submit"> {isLoading ? 'Searching...' : 'Search'} </button>
                 </div>
             </form>
@@ -64,8 +88,8 @@ function Search() {
                     <div>
                         <img src={user.avatar_url} className="w-[100px] h-[100px] rounded-full" />
                         <h2 className="font-bold">{user.name}</h2>
-                        <p>{user.bio}</p>
-                        <p>{user.login}</p>
+                        <p className="pt-2">{user.bio}</p>
+                        <p className="font-bold pt-2">{user.login}</p>
                     </div>
                     )
                 }
