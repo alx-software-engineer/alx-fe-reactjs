@@ -25,7 +25,7 @@ function Search() {
             setError(null);
 
             // fetch data.
-            const data = await fetchUserData(userName); 
+            const data = await fetchUserData(userName, location, repo); 
             setUser(data);
 
         } catch (error) {
@@ -85,12 +85,20 @@ function Search() {
 
                 { user && !isLoading && !errorData && (
 
-                    <div>
-                        <img src={user.avatar_url} className="w-[100px] h-[100px] rounded-full" />
-                        <h2 className="font-bold">{user.name}</h2>
-                        <p className="pt-2">{user.bio}</p>
-                        <p className="font-bold pt-2">{user.login}</p>
-                    </div>
+                    <nav>
+                        <ul>
+
+                            {user.map(currentUser => {
+                                <li key={currentUser.id}>
+                                    <img src={currentUser.avatar_url} className="w-[50px] h-[50px] rounded-full" />
+                                    <h2 className="font-bold">{currentUser.name}</h2>
+                                    <p className="pt-2">{currentUser.bio}</p>
+                                    <p className="font-bold pt-2">{user.login}</p>
+
+                                </li>
+                            })}
+                        </ul>
+                    </nav>
                     )
                 }
                

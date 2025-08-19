@@ -16,11 +16,10 @@ const fetchUserData = async (user, location, repoNumber) => {
             Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_API_KEY}`,
         },
     });
-    
 
     // Get Fetch User
-        const response = await api.get(`users?q=${query}`);
-        return response.data;
+        const response = await api.get(`users?q=${query}&per_page=2&page3`);
+        return response.data.items;
 };
 
 export default fetchUserData;
