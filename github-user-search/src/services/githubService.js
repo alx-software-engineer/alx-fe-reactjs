@@ -5,7 +5,7 @@ const fetchUserData = async (user) => {
 
     // Create URL and Headers
     const api = axios.create({
-        baseURL: import.meta.env.VITE_API_URL,
+        baseURL: 'https://api.github.com/',
         headers: {
             Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_API_KEY}`,
         },

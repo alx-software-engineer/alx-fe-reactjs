@@ -62,10 +62,10 @@ function Search() {
                 { user && !isLoading && !errorData && (
 
                     <div>
-                        <img src={user.avatar_url} alt="User Avatar" className="w-[100px] h-[100px] rounded-full" />
+                        <img src={user.avatar_url} className="w-[100px] h-[100px] rounded-full" />
                         <h2 className="font-bold">{user.name}</h2>
                         <p>{user.bio}</p>
-                        <p>link {user.login}</p>
+                        <p>{user.login}</p>
                     </div>
                     )
                 }
