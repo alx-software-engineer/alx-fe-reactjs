@@ -16,14 +16,11 @@ const fetchUserData = async (user, location, minRepos) => {
     if (minRepos) queryParts.push(`repos:>${minRepos}`);
     const query = queryParts.join('+');
 
+
+    const finalUrl = `https://api.github.com/search/users?q=${query}&per_page=2&page=1`;
+  
     // Get Fetch User
-        const response = await api.get('https://api.github.com/search/users', {
-            params : {
-                q: query,
-                per_page: 2,
-                page: 1
-            }
-        });
+        const response = await api.get(finalUrl);
         return response.data.items;
 };
 
