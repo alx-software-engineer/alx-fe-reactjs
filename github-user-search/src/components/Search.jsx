@@ -2,6 +2,7 @@ import { useState } from "react";
 import useUserStore from "../Store/UserDetails";
 import fetchUserData from "../services/githubService";
 
+
 function Search() {
     const [userName, setUserName] = useState("");
     const [location, setLocation] = useState("");
@@ -60,7 +61,6 @@ function Search() {
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     placeholder="Location"
-                    required
                     />
 
                     <input 
@@ -70,7 +70,6 @@ function Search() {
                     value={repo}
                     onChange={(e) => setRepo(e.target.value)}
                     placeholder="Minimum repository"
-                    required
                     />
 
                 <button 
@@ -87,15 +86,13 @@ function Search() {
 
                     <nav>
                         <ul>
-                            {user.map(currentUser => {
+                            {user.map(currentUser => (
                                 <li key={currentUser.id}>
                                     <img src={currentUser.avatar_url} className="w-[50px] h-[50px] rounded-full" />
-                                    <h2 className="font-bold">{currentUser.name}</h2>
-                                    <p className="pt-2">{currentUser.bio}</p>
                                     <p className="pt-2">{currentUser.html_url}</p>
-                                    <p className="font-bold pt-2">{user.login}</p>
+                                    <p className="font-bold pt-2">{currentUser.login}</p>
                                 </li>
-                            })}
+                            ))}
                         </ul>
                     </nav>
                     )

@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 const useUserStore = create(set => ({
-    user: [],
+    user: null,
 
-    isLoading: null,
+    isLoading: false,
 
     errorData: null,
 
@@ -11,7 +11,7 @@ const useUserStore = create(set => ({
 
     setLoading: (status) => set({isLoading: status}),
 
-    setUser: (userName) => set({user: userName})
+    setUser: (userData) => set({user: userData})
 }));
 
 export default useUserStore;
