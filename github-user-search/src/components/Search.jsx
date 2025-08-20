@@ -40,7 +40,7 @@ function Search() {
     } 
     
     return (
-         <div className="w-1/2 m-auto text-black p-2">
+         <div className="w-full md:w-3/4 lg:w-1/2 m-auto text-black p-2">
             <h1 className="font-bold text-xl mb-3">LOOKUP GITHUB <span className="text-red-800">PROFILES</span> </h1>
             <form onSubmit={handleSubmit}>
                 <div className=" bg-neutral-200 rounded-2xl p-2">
