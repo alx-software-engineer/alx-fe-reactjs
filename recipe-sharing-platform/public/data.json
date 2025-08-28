@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://images.unsplash.com/photo-1665332195309-9d75071138f0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://images.unsplash.com/photo-1560434019-4558f9a9e2a1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Jollof Rice",
+    "summary": "A West African favorite made with rice, tomatoes, peppers, and spices.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/03/ET5B5045-5-1024x576.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Egusi Soup",
+    "summary": "A hearty soup made with ground melon seeds, leafy vegetables, and assorted meats.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/06/DA2744EE-57F3-4071-B9A9-6E7BD2BCF463-1024x1024.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "Pounded Yam & Efo Riro",
+    "summary": "Smooth stretchy yam served with a rich spinach and pepper stew.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/6B86DCD4-0C04-49DA-9EE6-4066F655CF0D-1024x1024.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Suya",
+    "summary": "Spicy grilled beef skewers coated with suya spice mix, served with onions and tomatoes.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/778C1E81-5435-4916-BAB5-DC8FCB350333-1024x1024.jpeg"
+  },
+  {
+    "id": 7,
+    "title": "Moi Moi",
+    "summary": "Steamed bean pudding made from blended black-eyed peas, peppers, and spices.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/ET5B9773-3-1024x1024.jpeg"
+  },
+  {
+    "id": 8,
+    "title": "Akara",
+    "summary": "Crispy deep-fried bean cakes, usually enjoyed with pap or bread.",
+    "image": "https://kikifoodies.com/wp-content/uploads/2024/11/E685E539-B688-4131-BFFE-2288C9899A61-1024x1024.jpeg"
+  },
+  {
+    "id": 9,
+    "title": "Suya",
+    "summary": "A light, spicy broth cooked with fish, chicken, or goat meat and local spices.",
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=1250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
