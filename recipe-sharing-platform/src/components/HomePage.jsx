@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
 
 function HomePage() {
-    const [recipes, setRecipes] = useState<Recipe[]>([]);
+    const [recipes, setRecipes] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState(null);
 
-    // Interface.
-    interface Recipe {
-    id: number;
-    title: string;
-    summary: string;
-    image: string;
-    }
+  
 
     useEffect(() => {
         const fetchLocalRecipes = async () => {
