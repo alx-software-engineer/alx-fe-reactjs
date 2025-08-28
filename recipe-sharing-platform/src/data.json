@@ -3,54 +3,221 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1665332195309-9d75071138f0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1665332195309-9d75071138f0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "200g Spaghetti",
+      "100g Guanciale or Pancetta, diced",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "Freshly ground black pepper",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Boil the spaghetti in salted water until al dente.",
+      "While the pasta cooks, fry the guanciale or pancetta in a pan until crisp. Turn off the heat.",
+      "In a bowl, whisk the eggs and grated Pecorino cheese together. Season generously with black pepper.",
+      "Drain the pasta, reserving a little pasta water. Immediately add the hot pasta to the pan with the meat and toss to combine.",
+      "Quickly pour the egg and cheese mixture over the pasta, stirring vigorously to create a creamy sauce. If it's too thick, add a splash of the reserved pasta water.",
+      "Serve immediately with an extra sprinkle of cheese and black pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1560434019-4558f9a9e2a1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1560434019-4558f9a9e2a1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "500g boneless chicken breast, cut into chunks",
+      "1 cup plain yogurt",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp turmeric powder",
+      "1 tsp garam masala",
+      "2 tbsp vegetable oil",
+      "1 large onion, finely chopped",
+      "400g crushed tomatoes",
+      "1 cup heavy cream",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "In a bowl, mix the chicken with yogurt, ginger-garlic paste, turmeric, and garam masala. Marinate for at least 1 hour.",
+      "Grill or pan-sear the chicken until cooked through. Set aside.",
+      "In a large pan, heat the oil and sauté the onion until golden brown.",
+      "Add the crushed tomatoes and cook for 10 minutes until the sauce thickens.",
+      "Stir in the heavy cream and simmer for a few minutes.",
+      "Add the cooked chicken to the sauce and heat through. Garnish with fresh cilantro before serving."
+    ]
   },
   {
     "id": 3,
     "title": "Jollof Rice",
     "summary": "A West African favorite made with rice, tomatoes, peppers, and spices.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2025/03/ET5B5045-5-1024x576.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/03/ET5B5045-5-1024x576.jpeg",
+    "ingredients": [
+      "2 cups long-grain parboiled rice",
+      "4 large red bell peppers (Tatashe)",
+      "2 scotch bonnet peppers (Ata Rodo)",
+      "400g tomato plum",
+      "2 large onions",
+      "1/4 cup vegetable oil",
+      "3 tbsp tomato paste",
+      "2 tsp curry powder",
+      "1 tsp dried thyme",
+      "3 cups chicken or beef stock",
+      "Salt and seasoning cubes to taste"
+    ],
+    "instructions": [
+      "Blend the bell peppers, scotch bonnets, tomatoes, and one onion until smooth to create the pepper base.",
+      "In a large pot, heat the oil and sauté the remaining chopped onion until fragrant.",
+      "Stir in the tomato paste and fry for 5 minutes.",
+      "Pour in the pepper base and cook for 20 minutes, stirring occasionally, until the stew thickens.",
+      "Add the stock, curry powder, thyme, salt, and seasoning cubes. Bring to a boil.",
+      "Wash the rice and stir it into the stew. Cover the pot tightly with a lid and foil paper, then reduce the heat to low.",
+      "Cook for 30-40 minutes, or until the rice is tender and has absorbed all the liquid. Do not stir during this time.",
+      "Once cooked, stir the rice from the bottom up. Serve hot."
+    ]
   },
   {
     "id": 4,
     "title": "Egusi Soup",
     "summary": "A hearty soup made with ground melon seeds, leafy vegetables, and assorted meats.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2025/06/DA2744EE-57F3-4071-B9A9-6E7BD2BCF463-1024x1024.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/06/DA2744EE-57F3-4071-B9A9-6E7BD2BCF463-1024x1024.jpeg",
+    "ingredients": [
+      "1 cup ground egusi (melon seeds)",
+      "1/2 cup palm oil",
+      "Assorted meats and fish (beef, shaki, stockfish)",
+      "1 bunch of spinach or ugu leaves, chopped",
+      "2 tbsp ground crayfish",
+      "1 onion, chopped",
+      "2 scotch bonnet peppers, blended",
+      "2 cups meat stock",
+      "Salt and seasoning cubes to taste"
+    ],
+    "instructions": [
+      "Boil your assorted meats and fish with seasoning until tender. Set aside, reserving the stock.",
+      "In a pot, heat the palm oil. Add the chopped onions and fry until translucent.",
+      "Mix the ground egusi with a little water to form a thick paste. Add scoops of the paste to the hot oil and fry for about 10 minutes, stirring constantly until it forms scrambles.",
+      "Pour in the meat stock and blended peppers. Add the ground crayfish, salt, and seasoning. Stir well and bring to a boil.",
+      "Add the cooked meats and fish. Cover and simmer for 15 minutes for the flavors to meld.",
+      "Stir in the chopped spinach or ugu leaves and cook for another 3-5 minutes. Serve with a swallow of your choice."
+    ]
   },
   {
     "id": 5,
     "title": "Pounded Yam & Efo Riro",
     "summary": "Smooth stretchy yam served with a rich spinach and pepper stew.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/6B86DCD4-0C04-49DA-9EE6-4066F655CF0D-1024x1024.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/6B86DCD4-0C04-49DA-9EE6-4066F655CF0D-1024x1024.jpeg",
+    "ingredients": [
+      "1 medium tuber of yam",
+      "For Efo Riro:",
+      "1 large bunch of spinach (Efo Shoko), chopped",
+      "4 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1/2 cup palm oil",
+      "1 onion, chopped",
+      "2 tbsp Iru (locust beans)",
+      "Assorted meats and smoked fish",
+      "2 tbsp ground crayfish",
+      "Salt and seasoning cubes to taste"
+    ],
+    "instructions": [
+      "For Pounded Yam: Peel, wash, and boil the yam until very soft. Pound in a mortar with a pestle until it becomes a smooth, stretchy dough.",
+      "For Efo Riro: Blend the bell peppers and scotch bonnets coarsely. Set aside.",
+      "In a pot, heat the palm oil. Add the chopped onion and Iru and sauté until fragrant.",
+      "Pour in the blended pepper mix and cook for 15 minutes.",
+      "Add the pre-cooked meats, smoked fish, crayfish, salt, and seasoning. Stir and cook for another 10 minutes.",
+      "Add the chopped spinach, stir well to combine with the sauce, and cook for 5 minutes. Be careful not to overcook the vegetables.",
+      "Serve the hot Efo Riro with the Pounded Yam."
+    ]
   },
   {
     "id": 6,
     "title": "Suya",
     "summary": "Spicy grilled beef skewers coated with suya spice mix, served with onions and tomatoes.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/778C1E81-5435-4916-BAB5-DC8FCB350333-1024x1024.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/778C1E81-5435-4916-BAB5-DC8FCB350333-1024x1024.jpeg",
+    "ingredients": [
+      "500g beef (sirloin or flank steak), thinly sliced",
+      "1/2 cup Suya spice (Yaji)",
+      "3 tbsp groundnut oil (or vegetable oil)",
+      "1 large red onion, sliced",
+      "2 tomatoes, sliced",
+      "Wooden skewers, soaked in water"
+    ],
+    "instructions": [
+      "Pat the beef slices dry with a paper towel.",
+      "In a bowl, combine the Suya spice and oil to form a paste. Rub the paste generously over both sides of the beef slices.",
+      "Thread the spiced beef onto the soaked wooden skewers.",
+      "Grill on a barbecue or in an oven with a grill setting for 10-15 minutes, turning occasionally, until cooked through and slightly charred.",
+      "Serve hot with fresh slices of onion and tomato."
+    ]
   },
   {
     "id": 7,
     "title": "Moi Moi",
     "summary": "Steamed bean pudding made from blended black-eyed peas, peppers, and spices.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/ET5B9773-3-1024x1024.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2025/04/ET5B9773-3-1024x1024.jpeg",
+    "ingredients": [
+      "2 cups black-eyed peas, peeled",
+      "1 red bell pepper (Tatashe)",
+      "1 scotch bonnet pepper (optional)",
+      "1 onion, chopped",
+      "1/4 cup vegetable oil",
+      "2 hard-boiled eggs, sliced (optional)",
+      "Flaked cooked fish (optional)",
+      "Salt and seasoning cubes to taste"
+    ],
+    "instructions": [
+      "Soak the peeled beans in water for about 10 minutes.",
+      "In a blender, combine the beans, bell pepper, scotch bonnet, and onion with a little water. Blend until you have a very smooth, thick batter.",
+      "Pour the batter into a bowl. Stir in the vegetable oil, salt, and seasoning cubes. Mix well.",
+      "Grease your Moi Moi containers (or use Moi Moi leaves). Pour the batter into the containers, filling them up to three-quarters full.",
+      "Add your fillings, like a slice of boiled egg or some flaked fish, to each container.",
+      "Place the containers in a pot with a little water at the bottom. Cover tightly and steam for 40-50 minutes, or until a skewer inserted comes out clean.",
+      "Allow to cool slightly before serving."
+    ]
   },
   {
     "id": 8,
     "title": "Akara",
     "summary": "Crispy deep-fried bean cakes, usually enjoyed with pap or bread.",
-    "image": "https://kikifoodies.com/wp-content/uploads/2024/11/E685E539-B688-4131-BFFE-2288C9899A61-1024x1024.jpeg"
+    "image": "https://kikifoodies.com/wp-content/uploads/2024/11/E685E539-B688-4131-BFFE-2288C9899A61-1024x1024.jpeg",
+    "ingredients": [
+      "1 cup black-eyed peas, peeled",
+      "1 small onion, roughly chopped",
+      "1 scotch bonnet pepper, chopped",
+      "Salt to taste",
+      "Vegetable oil for deep frying"
+    ],
+    "instructions": [
+      "Soak the peeled beans in water for at least 30 minutes.",
+      "Drain the beans and blend them with the onion and scotch bonnet pepper. Use very little water to get a thick, smooth paste.",
+      "Pour the paste into a bowl. Using a whisk or mixer, incorporate air into the batter for about 5 minutes until it is light and fluffy.",
+      "Season with salt and mix well.",
+      "Heat vegetable oil in a deep pan. Use a spoon to scoop the batter and drop it carefully into the hot oil.",
+      "Fry for a few minutes on each side until golden brown and crispy.",
+      "Remove with a slotted spoon and drain on paper towels. Serve hot."
+    ]
   },
   {
     "id": 9,
-    "title": "Suya",
+    "title": "Pepper Soup",
     "summary": "A light, spicy broth cooked with fish, chicken, or goat meat and local spices.",
-    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=1250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=1250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "500g goat meat or catfish, cut into pieces",
+      "2 tbsp pepper soup spice mix",
+      "1 scotch bonnet pepper, finely chopped",
+      "1 onion, chopped",
+      "A handful of scent leaves (Efirin), chopped",
+      "Salt and seasoning cubes to taste"
+    ],
+    "instructions": [
+      "Wash the meat or fish and place it in a pot.",
+      "Add the chopped onion, seasoning cubes, salt, and enough water to cover the meat.",
+      "Bring to a boil and cook until the meat is tender.",
+      "Add the pepper soup spice mix and the chopped scotch bonnet pepper. Stir well.",
+      "Cover the pot and simmer for another 10-15 minutes to allow the flavors to infuse.",
+      "Stir in the chopped scent leaves and cook for 2 more minutes.",
+      "Serve hot."
+    ]
   }
 ]
