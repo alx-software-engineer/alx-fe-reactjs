@@ -1,57 +1,36 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import recipeData from "../data.json"
 
 function HomePage() {
-    const [recipes, setRecipes] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-  
-
-    useEffect(() => {
-        const fetchLocalRecipes = async () => {
-            try {
-                const response = await fetch("/data.json")
-
-                if (!response.ok) {
-                throw new Error('Failed to fetch recipes');
-                }
-
-                const data = await response.json();
-                setRecipes(data);
-
-            } catch (err) {
-                 setError(err.message);
-            } finally {
-                setIsLoading(false);
-            }
-        }
-
-        fetchLocalRecipes();
-
-    }, []);
-
-
-    if (isLoading) {
-        return <div>Loading recipes...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
+    const [recipes, setRecipes] = useState(recipeData);
 
   // If successful, display the list of recipes.
   return (
-    <div>
-      <h1>Recipe List</h1>
-      <ul>
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <h1 className="text-4xl font-bold text-center text-emerald-600 mb-10">Recipe List</h1>
+      <ul className="list-none p-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {recipes.map(recipe => (
-          <li key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <p>{recipe.summary}</p>
+          <li key={recipe.id} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src={recipe.image} alt={recipe.title} className="h-48 w-full object-cover hover:scale-105 transition-transform duration-300" />
+            
+          <div className="p-5">
+                <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                  {recipe.title}
+                </h2>
+                <p className="text-gray-600 text-sm mb-4">
+                  {recipe.summary}
+                </p>
+                <button
+                  type="button"
+                  className="w-full px-4 py-2 rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition"
+                >
+                  View Recipe
+                </button>
+              </div>
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 }
 
