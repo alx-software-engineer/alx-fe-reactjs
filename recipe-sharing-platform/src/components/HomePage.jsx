@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import recipeData from "../data.json"
+import useRecipeStore from "./Store/recipeStore";
 import { Link } from "react-router-dom";
 
 function HomePage() {
-    const [recipes] = useState(recipeData);
+     const recipes = useRecipeStore(state => state.recipes);
 
-  // If successful, display the list of recipes.
+  // Display the list of recipes.
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <div className="flex flex-col gap-4 justify-between align-middle mb-10 w-full sm:flex-row sm:gap-0">
