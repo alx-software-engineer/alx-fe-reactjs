@@ -9,38 +9,46 @@ function AddRecipeForm() {
     const [steps, setSteps] = useState('');
     const [image, setImage] = useState('');
     const [summary, setSummary] = useState('');
+    const [errors, setErrors] = useState({});
    
     const addRecipe = useRecipeStore(state => state.addRecipe);
     const navigate = useNavigate();
 
+
+    const validateForm = () => {
+        const newErrors = {};
+
+        if (!title.trim()) newErrors.title = 'Title is required.';
+        if (!summary.trim()) newErrors.summary = 'Summary is required.';
+        if (!ingredients.trim()) newErrors.ingredients = 'Ingredients are required.';
+        if (!steps.trim()) newErrors.steps = 'Preparation steps are required.';
+
+        setErrors(newErrors);
+        // If the newErrors object is empty, the form is valid
+        return Object.keys(newErrors).length === 0;
+    };
+
+
+
      const handleSubmit = (e) => {
         e.preventDefault();
-        if (!title || !summary || !ingredients || !steps) {
-            alert('Please fill out all required fields.');
-            return;
-        }
+        if (validateForm()) {
 
-        // Combine the state into a single new recipe object
-            const newRecipe = {
-            title: title.trim(),
-            summary: summary.trim(),
-            image: image.trim() || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png?20250720084638',
-            ingredients: ingredients.split('\n').map(item => item.trim()).filter(item => item !== ''),
-            instructions: steps.split('\n').map(item => item.trim()).filter(item => item !== ''), 
-        };
+                const newRecipe = {
+                    title: title.trim(),
+                    summary: summary.trim(),
+                    image: image.trim() || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png?20250720084638',
+                    ingredients: ingredients.split('\n').map(item => item.trim()).filter(item => item !== ''),
+                    instructions: steps.split('\n').map(item => item.trim()).filter(item => item !== ''), 
+                };
 
-         // Action from store
         addRecipe(newRecipe);
 
         // Navigate the user back to the home page
         alert('Recipe successfully added!');
         navigate('/');
 
-        setTitle('');
-        setSummary('');
-        setImage('');
-        setIngredients('');
-        setSteps('');
+        }  
     };
     
 
