@@ -21,12 +21,12 @@ function AddRecipeForm() {
         }
 
         // Combine the state into a single new recipe object
-        const newRecipe = {
-            title,
-            summary,
-            image,
-            ingredients: ingredients.split('\n'),
-            instructions: steps.split('\n'),
+            const newRecipe = {
+            title: title.trim(),
+            summary: summary.trim(),
+            image: image.trim() || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png?20250720084638',
+            ingredients: ingredients.split('\n').map(item => item.trim()).filter(item => item !== ''),
+            instructions: steps.split('\n').map(item => item.trim()).filter(item => item !== ''), 
         };
 
          // Action from store
