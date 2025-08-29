@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useRecipeStore from "./Store/recipeStore";
+import useRecipeStore from "../Store/recipeStore";
 import { Link } from "react-router-dom";
 
 function HomePage() {
