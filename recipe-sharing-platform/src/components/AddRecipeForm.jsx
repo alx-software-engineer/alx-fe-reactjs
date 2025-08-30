@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useRecipeStore from "../Store/recipeStore";
 
 
@@ -53,10 +53,11 @@ function AddRecipeForm() {
     
 
     return (
-        // Main container for the form, centered and styled like a card
+    <div>
+         <Link to={"/"} className="mx-10  font-extrabold mb-3 text-emerald-600">Go Back</Link>
         <div className="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg my-10">
-            <form onSubmit={handleSubmit} noValidate> {/* noValidate prevents browser's default HTML validation tooltips */}
-                <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Add Your New Recipe</h1>
+            <form onSubmit={handleSubmit} noValidate>
+                <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center md:text-emerald-600">Add Your New Recipe</h1>
 
                 {/* Recipe Title Input */}
                 <div className="mb-4">
@@ -136,7 +137,8 @@ function AddRecipeForm() {
                 </button>
             </form>
         </div>
-    )
+    </div>
+)
 
 }
 
